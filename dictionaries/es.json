@@ -1,0 +1,9 @@
+{
+  "sidebar": {
+    "dashboard": "Panel",
+    "transactions": "Transacciones",
+    "categories": "Categorías",
+    "budgets": "Presupuestos",
+    "settings": "Configuración"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "categories": "Categories",
+    "budgets": "Budgets",
+    "settings": "Settings"
+  }
+}
