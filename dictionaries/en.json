@@ -5,5 +5,28 @@
     "categories": "Categories",
     "budgets": "Budgets",
     "settings": "Settings"
+  },
+  "header": {
+    "dashboard": {
+      "title": "Dashboard"
+    },
+    "transactions": {
+      "title": "Transactions"
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "budgets": {
+      "title": "Budgets"
+    },
+    "settings": {
+      "title": "Settings"
+    },
+    "search_placeholder": "Search...",
+    "date_options": {
+      "this_month": "This month",
+      "last_month": "Last month",
+      "year_to_date": "Year to date"
+    }
   }
 }

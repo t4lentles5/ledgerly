@@ -23,7 +23,7 @@ export const SettingsItem = ({ settingsItem }: SettingsItemProps) => {
           isActive
             ? 'bg-sidebar-primary text-foreground'
             : 'hover:bg-sidebar-accent hover:text-foreground text-muted-foreground'
-        } flex items-center gap-3 rounded-lg px-4 py-2 transition-colors duration-300 ease-in-out `}
+        } flex items-center gap-3 rounded-lg px-4 py-2 transition-colors duration-200 ease-in-out `}
       >
         <span
           className={`${settingsItem.icon}`}

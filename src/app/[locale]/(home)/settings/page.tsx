@@ -1,7 +1,17 @@
-export default function SettingsPage() {
+import { Header } from '@/shared/ui/header/Header';
+import { getDictionary } from '@lib/i18n';
+
+export default async function SettingsPage({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'es' }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+
   return (
     <>
-      <h1>SettingsPage</h1>
+      <Header title={dict.header.settings.title} />
     </>
   );
 }

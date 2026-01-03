@@ -1,7 +1,7 @@
 import { Header } from '@/shared/ui/header/Header';
 import { getDictionary } from '@lib/i18n';
 
-export default async function TransactionsPage({
+export default async function HomePage({
   params,
 }: {
   params: Promise<{ locale: 'en' | 'es' }>;
@@ -17,11 +17,7 @@ export default async function TransactionsPage({
 
   return (
     <>
-      <Header
-        title={dict.header.transactions.title}
-        searchPlaceholder={dict.header.search_placeholder}
-        dateOptions={dateOptions}
-      />
+      <Header title={dict.header.dashboard.title} dateOptions={dateOptions} />
     </>
   );
 }

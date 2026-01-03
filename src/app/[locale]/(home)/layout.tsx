@@ -20,7 +20,9 @@ export default async function HomeLayout({
   return (
     <>
       <Sidebar items={items} settingsItem={settingsItem} />
-      <div className='ml-60'>{children}</div>
+      <div className='ml-60 flex items-center justify-center'>
+        <div className='max-w-4xl w-full p-2'>{children}</div>
+      </div>
     </>
   );
 }

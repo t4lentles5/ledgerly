@@ -5,5 +5,28 @@
     "categories": "Categorías",
     "budgets": "Presupuestos",
     "settings": "Configuración"
+  },
+  "header": {
+    "dashboard": {
+      "title": "Panel"
+    },
+    "transactions": {
+      "title": "Transacciones"
+    },
+    "categories": {
+      "title": "Categorías"
+    },
+    "budgets": {
+      "title": "Presupuestos"
+    },
+    "settings": {
+      "title": "Configuración"
+    },
+    "search_placeholder": "Buscar...",
+    "date_options": {
+      "this_month": "Este mes",
+      "last_month": "Mes pasado",
+      "year_to_date": "Año hasta la fecha"
+    }
   }
 }
