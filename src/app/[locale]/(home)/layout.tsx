@@ -1,9 +1,7 @@
-import {
-  getSettingsItem,
-  getSidebarItems,
-} from '@/features/navigation/sidebar-item';
-import { Sidebar } from '@/shared/ui/sidebar/Sidebar';
 import { getDictionary } from '@lib/i18n';
+
+import { getSettingsItem, getSidebarItems } from '@/features/navigation/data';
+import { Sidebar } from '@/shared/ui/sidebar/Sidebar';
 
 export default async function HomeLayout({
   children,

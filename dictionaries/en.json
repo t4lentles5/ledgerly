@@ -28,5 +28,19 @@
       "last_month": "Last month",
       "year_to_date": "Year to date"
     }
+  },
+  "categories_list": {
+    "income": "Income",
+    "food": "Food",
+    "housing": "Housing",
+    "transport": "Transport",
+    "shopping": "Shopping",
+    "entertainment": "Entertainment",
+    "health": "Health",
+    "utilities": "Utilities",
+    "savings": "Savings",
+    "education": "Education",
+    "travel": "Travel",
+    "transactions": "transactions"
   }
 }

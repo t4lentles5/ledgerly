@@ -28,5 +28,19 @@
       "last_month": "Mes pasado",
       "year_to_date": "Año hasta la fecha"
     }
+  },
+  "categories_list": {
+    "income": "Ingresos",
+    "food": "Comida",
+    "housing": "Vivienda",
+    "transport": "Transporte",
+    "shopping": "Compras",
+    "entertainment": "Entretenimiento",
+    "health": "Salud",
+    "utilities": "Servicios",
+    "savings": "Ahorros",
+    "education": "Educación",
+    "travel": "Viajes",
+    "transactions": "transacciones"
   }
 }

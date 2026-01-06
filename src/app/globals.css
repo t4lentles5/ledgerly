@@ -12,6 +12,8 @@
 
   --surface-hover: oklch(0.95 0 0);
   --surface-active: oklch(0.93 0 0);
+
+  --card: oklch(0.96 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,8 @@
 
     --surface-hover: oklch(0.22 0 0);
     --surface-active: oklch(0.24 0 0);
+
+    --card: oklch(0.14 0 0);
   }
 }
 
@@ -43,6 +47,31 @@
 
   --color-surface-hover: var(--surface-hover);
   --color-surface-active: var(--surface-active);
+
+  --color-card: var(--card);
+
+  --color-green: oklch(72.3% 0.219 149.579);
+  --color-green-surface: oklch(52.7% 0.154 150.069 / 0.1);
+  --color-orange: oklch(70.5% 0.213 47.604);
+  --color-orange-surface: oklch(70.5% 0.213 47.604 / 0.1);
+  --color-blue: oklch(62.3% 0.214 259.815);
+  --color-blue-surface: oklch(62.3% 0.214 259.815 / 0.1);
+  --color-amber: oklch(76.9% 0.188 70.08);
+  --color-amber-surface: oklch(76.9% 0.188 70.08 / 0.1);
+  --color-violet: oklch(60.6% 0.25 292.717);
+  --color-violet-surface: oklch(60.6% 0.25 292.717 / 0.1);
+  --color-pink: oklch(65.6% 0.241 354.308);
+  --color-pink-surface: oklch(65.6% 0.241 354.308 / 0.1);
+  --color-red: oklch(63.7% 0.237 25.331);
+  --color-red-surface: oklch(64.5% 0.246 16.439 / 0.1);
+  --color-cyan: oklch(71.7% 0.149 216.79);
+  --color-cyan-surface: oklch(71.7% 0.149 216.79 / 0.1);
+  --color-teal: oklch(69.8% 0.165 186.27);
+  --color-teal-surface: oklch(69.8% 0.165 186.27 / 0.1);
+  --color-indigo: oklch(59.8% 0.222 284.15);
+  --color-indigo-surface: oklch(59.8% 0.222 284.15 / 0.1);
+  --color-yellow: oklch(82.3% 0.199 87.89);
+  --color-yellow-surface: oklch(82.3% 0.199 87.89 / 0.1);
 
   @keyframes dropdown-in {
     from {
