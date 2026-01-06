@@ -18,15 +18,15 @@ interface SidebarProps {
 
 export const Sidebar = ({ items, settingsItem }: SidebarProps) => {
   return (
-    <section className='w-60 border-r h-screen fixed flex flex-col'>
+    <section className='fixed flex h-screen w-60 flex-col border-r'>
       <div className='border-b p-5'>
-        <Link href={'/'} className='font-bold text-2xl'>
+        <Link href={'/'} className='text-2xl font-bold'>
           Ledgerly
         </Link>
       </div>
 
-      <div className='flex flex-col p-5 grow justify-between gap-3'>
-        <nav className='flex flex-col grow gap-3'>
+      <div className='flex grow flex-col justify-between gap-3 p-5'>
+        <nav className='flex grow flex-col gap-3'>
           {items.map((item) => (
             <SidebarItem item={item} key={item.href} />
           ))}

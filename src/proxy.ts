@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 const locales = ['en', 'es'];
 const defaultLocale = 'en';
@@ -10,15 +10,15 @@ export function proxy(request: NextRequest) {
   // Skip internal Next.js paths and static files
   if (
     pathname.startsWith('/_next') ||
-    pathname.includes('.') || 
+    pathname.includes('.') ||
     pathname.startsWith('/api')
   ) {
     return;
   }
-  
+
   // Check if there is any supported locale in the pathname
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
   if (pathnameHasLocale) return;
@@ -26,7 +26,7 @@ export function proxy(request: NextRequest) {
   // Redirect if there is no locale
   const locale = defaultLocale;
   request.nextUrl.pathname = `/${locale}${pathname}`;
-  
+
   return NextResponse.redirect(request.nextUrl);
 }
 

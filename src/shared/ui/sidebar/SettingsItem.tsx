@@ -21,12 +21,12 @@ export const SettingsItem = ({ settingsItem }: SettingsItemProps) => {
         href={settingsItem.href}
         className={`${
           isActive
-            ? 'bg-sidebar-primary text-foreground'
-            : 'hover:bg-sidebar-accent hover:text-foreground text-muted-foreground'
-        } flex items-center gap-3 rounded-lg px-4 py-2 transition-colors duration-200 ease-in-out `}
+            ? 'bg-surface-active'
+            : 'hover:bg-surface-hover hover:text-foreground text-muted-foreground'
+        } flex items-center gap-3 rounded-lg px-4 py-2 transition-colors duration-200 ease-in-out`}
       >
         <span
-          className={`${settingsItem.icon}`}
+          className={`${settingsItem.icon} ${isActive && 'text-primary'}`}
           role='img'
           aria-hidden='true'
         />
