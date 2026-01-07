@@ -20,7 +20,7 @@ export default async function CategoriesPage({
         searchPlaceholder={dict.header.search_placeholder}
       />
 
-      <div className='flex flex-wrap gap-5'>
+      <div className='flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:gap-5'>
         {categories.map((category) => (
           <CategoryCard
             key={category.id}

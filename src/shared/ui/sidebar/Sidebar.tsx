@@ -1,6 +1,6 @@
-import { SidebarItem } from './SidebarItem';
-import { SettingsItem } from './SettingsItem';
 import Link from 'next/link';
+
+import { SidebarItem } from './SidebarItem';
 
 interface SidebarProps {
   items: {
@@ -18,7 +18,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ items, settingsItem }: SidebarProps) => {
   return (
-    <section className='fixed flex h-screen w-60 flex-col border-r'>
+    <section className='fixed hidden h-screen w-60 flex-col border-r lg:flex'>
       <div className='border-b p-5'>
         <Link href={'/'} className='text-2xl font-bold'>
           Ledgerly
@@ -32,7 +32,7 @@ export const Sidebar = ({ items, settingsItem }: SidebarProps) => {
           ))}
         </nav>
 
-        <SettingsItem settingsItem={settingsItem} />
+        <SidebarItem item={settingsItem} />
       </div>
     </section>
   );
