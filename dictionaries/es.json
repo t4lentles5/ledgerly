@@ -42,5 +42,9 @@
     "education": "Educación",
     "travel": "Viajes",
     "transactions": "transacciones"
+  },
+  "budgets_list": {
+    "spent": "gastado",
+    "of": "de"
   }
 }

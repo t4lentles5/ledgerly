@@ -15,7 +15,7 @@ export const Header = ({
 }: HeaderProps) => {
   return (
     <>
-      <header className='bg-background/80 sticky top-0 z-10 -mx-5 mb-3 flex h-16 items-center justify-between border-b px-5 backdrop-blur-md lg:mx-0 lg:mb-5 lg:px-0'>
+      <header className='bg-background/80 sticky top-0 z-10 mb-3 flex h-16 items-center justify-between border-b px-5 backdrop-blur-md lg:mb-5 lg:px-0'>
         <h2 className='text-foreground text-xl font-bold tracking-tight'>
           {title}
         </h2>

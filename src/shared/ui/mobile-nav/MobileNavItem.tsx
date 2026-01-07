@@ -23,13 +23,9 @@ export const MobileNavItem = ({ item }: MobileNavItem) => {
         isActive
           ? 'text-primary'
           : 'hover:bg-surface-hover hover:text-foreground text-muted-foreground'
-      } flex w-full flex-col items-center justify-center gap-1 rounded-lg p-1 transition-colors duration-200 ease-in-out`}
+      } flex w-full flex-col items-center justify-center gap-1 rounded-lg transition-colors duration-200 ease-in-out`}
     >
-      <span
-        className={`${item.icon} text-xl`}
-        role='img'
-        aria-hidden='true'
-      />
+      <span className={`${item.icon} text-xl`} role='img' aria-hidden='true' />
       <span className='text-[10px] font-medium'>{item.label}</span>
     </Link>
   );

@@ -20,8 +20,8 @@ export default async function HomeLayout({
     <>
       <Sidebar items={items} settingsItem={settingsItem} />
 
-      <div className='mb-16 flex items-center justify-center lg:mb-0 lg:ml-60'>
-        <div className='w-full px-5 pb-3 lg:max-w-4xl'>{children}</div>
+      <div className='flex items-center justify-center lg:mb-0 lg:ml-60'>
+        <div className='w-full pb-3 lg:max-w-4xl lg:pb-5'>{children}</div>
       </div>
 
       <MobileNav items={items} settingsItem={settingsItem} />
