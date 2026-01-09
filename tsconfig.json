@@ -20,8 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@dictionaries/*": ["./dictionaries/*"],
-      "@lib/*": ["./lib/*"]
+      "@dictionaries/*": ["./src/shared/dictionaries/*"],
+      "@lib/*": ["./src/shared/lib/*"]
     }
   },
   "include": [

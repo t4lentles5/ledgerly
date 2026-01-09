@@ -46,5 +46,19 @@
   "budgets_list": {
     "spent": "spent",
     "of": "of"
+  },
+  "date_format": {
+    "yesterday": "Yesterday",
+    "at": "at"
+  },
+  "transactions_view": {
+    "search_placeholder": "Search transactions...",
+    "date": "Date",
+    "amount": "Amount",
+    "status": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "failed": "Failed"
+    }
   }
 }

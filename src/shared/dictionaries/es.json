@@ -46,5 +46,19 @@
   "budgets_list": {
     "spent": "gastado",
     "of": "de"
+  },
+  "date_format": {
+    "yesterday": "Ayer",
+    "at": "a las"
+  },
+  "transactions_view": {
+    "search_placeholder": "Buscar transacciones...",
+    "date": "Fecha",
+    "amount": "Monto",
+    "status": {
+      "completed": "Completado",
+      "pending": "Pendiente",
+      "failed": "Fallido"
+    }
   }
 }

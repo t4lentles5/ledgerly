@@ -25,10 +25,10 @@ export const BudgetCard = ({
   }).format(budget.limit);
 
   return (
-    <article className='bg-card flex grow flex-col gap-4 rounded-lg border p-4 transition-shadow hover:shadow-sm sm:max-w-xs sm:p-5'>
+    <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex grow flex-col gap-4 rounded-xl border p-4 transition-all duration-200 sm:max-w-xs sm:p-5'>
       <header className='flex items-center gap-3'>
         <div
-          className={`${budget.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-full`}
+          className={`${budget.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-2xl transition-transform duration-200 group-hover:scale-105`}
         >
           <span
             className={`${budget.icon} text-lg`}
