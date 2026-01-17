@@ -25,10 +25,10 @@ export const BudgetCard = ({
   }).format(budget.limit);
 
   return (
-    <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex grow flex-col gap-4 rounded-xl border p-4 transition-all duration-200 sm:max-w-xs sm:p-5'>
+    <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex grow flex-col gap-4 rounded-xl border p-4 transition-all duration-200 ease-in-out sm:max-w-xs sm:p-5'>
       <header className='flex items-center gap-3'>
         <div
-          className={`${budget.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-2xl transition-transform duration-200 group-hover:scale-105`}
+          className={`${budget.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-2xl transition-transform duration-200 ease-in-out group-hover:scale-105`}
         >
           <span
             className={`${budget.icon} text-lg`}
@@ -50,7 +50,7 @@ export const BudgetCard = ({
       <section className='flex flex-col gap-2'>
         <div className='bg-surface-active h-2 w-full overflow-hidden rounded-full'>
           <div
-            className={`h-full transition-all duration-500 ease-in-out ${
+            className={`h-full transition-all duration-200 ease-in-out ${
               isOverBudget ? 'bg-red' : 'bg-primary'
             }`}
             style={{ width: `${percentage}%` }}

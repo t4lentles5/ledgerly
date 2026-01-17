@@ -18,7 +18,7 @@ export const CategoryCard = ({
     <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex grow flex-row items-center justify-between rounded-xl border p-4 transition-all duration-200 sm:max-w-52 sm:flex-col sm:items-start sm:gap-3 sm:p-5'>
       <header className='flex items-center gap-3'>
         <div
-          className={`${category.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-2xl transition-transform duration-200 group-hover:scale-105 sm:h-12 sm:w-12`}
+          className={`${category.surfaceClass} grid h-10 w-10 shrink-0 place-items-center rounded-2xl transition-transform duration-200 ease-in-out group-hover:scale-105 sm:h-12 sm:w-12`}
         >
           <span
             className={`${category.icon} text-lg sm:text-xl`}

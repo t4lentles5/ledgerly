@@ -1,18 +1,26 @@
 import { Select } from './Select';
+import { getDateOptions } from '@shared/config/date-options';
+import { getDictionary } from '@lib/i18n';
+
+type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 
 interface HeaderProps {
   title: string;
   searchPlaceholder?: string;
-  dateOptions?: { label: string; value: string }[];
+  showDateFilter?: boolean;
   dateDefaultValue?: string;
+  dict: Dictionary;
 }
 
 export const Header = ({
   title,
   searchPlaceholder,
-  dateOptions,
+  showDateFilter = false,
   dateDefaultValue,
+  dict,
 }: HeaderProps) => {
+  const dateOptions = showDateFilter ? getDateOptions(dict) : null;
+
   return (
     <>
       <header className='bg-background/80 sticky top-0 z-10 mb-3 flex h-16 items-center justify-between border-b px-5 backdrop-blur-md lg:mb-5 lg:px-0'>

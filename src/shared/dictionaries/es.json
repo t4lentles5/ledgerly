@@ -60,5 +60,15 @@
       "pending": "Pendiente",
       "failed": "Fallido"
     }
+  },
+  "dashboard_view": {
+    "financial_overview": "Resumen Financiero",
+    "expenses_categories": "Categorías de Gastos",
+    "budget_status": "Estado del Presupuesto",
+    "balance": "Balance",
+    "income": "Ingresos",
+    "expenses": "Gastos",
+    "view_all": "Ver Todo",
+    "no_expenses": "No hay gastos para mostrar"
   }
 }

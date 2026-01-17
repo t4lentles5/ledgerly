@@ -79,7 +79,7 @@ export function Select({
       >
         <span className='truncate font-medium'>{selectedLabel}</span>
         <span
-          className={`icon-[iconamoon--arrow-down-2] transition-transform duration-200 ${
+          className={`icon-[iconamoon--arrow-down-2] transition-transform duration-200 ease-in-out ${
             isOpen ? 'text-primary rotate-180' : 'text-muted-foreground'
           }`}
           aria-hidden='true'

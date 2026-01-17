@@ -1,8 +1,8 @@
 import { getDictionary } from '@lib/i18n';
 
-import { getSettingsItem, getSidebarItems } from '@/features/navigation/data';
-import { Sidebar } from '@/shared/ui/sidebar/Sidebar';
-import { MobileNav } from '@/shared/ui/mobile-nav/MobileNav';
+import { getSettingsItem, getSidebarItems } from '@features/navigation/data';
+import { Sidebar } from '@shared/ui/sidebar/Sidebar';
+import { MobileNav } from '@shared/ui/mobile-nav/MobileNav';
 
 export default async function HomeLayout({
   children,

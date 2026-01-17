@@ -28,10 +28,10 @@ export const TransactionItem = ({
   );
 
   return (
-    <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex flex-row items-center justify-between rounded-xl border p-4 transition-all duration-200'>
+    <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex flex-row items-center justify-between rounded-xl border p-4 transition-all duration-200 ease-in-out'>
       <div className='flex min-w-0 items-center gap-4'>
         <div
-          className={`${transaction.categorySurfaceClass} grid h-12 w-12 shrink-0 place-items-center rounded-2xl transition-transform duration-200 group-hover:scale-105`}
+          className={`${transaction.categorySurfaceClass} grid h-12 w-12 shrink-0 place-items-center rounded-2xl transition-transform duration-200 ease-in-out group-hover:scale-105`}
         >
           <span
             className={`${transaction.categoryIcon} text-xl`}

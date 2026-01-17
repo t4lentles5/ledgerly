@@ -60,5 +60,15 @@
       "pending": "Pending",
       "failed": "Failed"
     }
+  },
+  "dashboard_view": {
+    "financial_overview": "Financial Overview",
+    "expenses_categories": "Expenses Categories",
+    "budget_status": "Budget Status",
+    "balance": "Balance",
+    "income": "Income",
+    "expenses": "Expenses",
+    "view_all": "View All",
+    "no_expenses": "No expenses to display"
   }
 }

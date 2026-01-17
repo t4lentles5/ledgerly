@@ -1,5 +1,6 @@
-import { Header } from '@/shared/ui/header/Header';
 import { getDictionary } from '@lib/i18n';
+
+import { Header } from '@shared/ui/header/Header';
 
 export default async function SettingsPage({
   params,
@@ -11,7 +12,7 @@ export default async function SettingsPage({
 
   return (
     <>
-      <Header title={dict.header.settings.title} />
+      <Header title={dict.header.settings.title} dict={dict} />
     </>
   );
 }
