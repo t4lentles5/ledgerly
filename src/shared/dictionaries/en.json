@@ -70,5 +70,24 @@
     "expenses": "Expenses",
     "view_all": "View All",
     "no_expenses": "No expenses to display"
+  },
+  "settings_view": {
+    "profile": "Profile",
+    "profile_description": "Manage your personal information",
+    "full_name": "Full Name",
+    "email": "Email Address",
+    "preferences": "Preferences",
+    "preferences_description": "Customize your experience",
+    "language": "Language",
+    "currency": "Currency",
+    "security": "Security",
+    "security_description": "Protect your account",
+    "change_password": "Change Password",
+    "two_factor": "Two-Factor Authentication",
+    "two_factor_desc": "Add an extra layer of security",
+    "delete_account": "Delete Account",
+    "delete_account_desc": "Permanently delete your account and all data",
+    "save_changes": "Save Changes",
+    "cancel": "Cancel"
   }
 }

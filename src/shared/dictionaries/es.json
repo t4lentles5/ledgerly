@@ -70,5 +70,24 @@
     "expenses": "Gastos",
     "view_all": "Ver Todo",
     "no_expenses": "No hay gastos para mostrar"
+  },
+  "settings_view": {
+    "profile": "Perfil",
+    "profile_description": "Administra tu información personal",
+    "full_name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "preferences": "Preferencias",
+    "preferences_description": "Personaliza tu experiencia",
+    "language": "Idioma",
+    "currency": "Moneda",
+    "security": "Seguridad",
+    "security_description": "Protege tu cuenta",
+    "change_password": "Cambiar Contraseña",
+    "two_factor": "Autenticación de Dos Factores",
+    "two_factor_desc": "Añade una capa extra de seguridad",
+    "delete_account": "Eliminar Cuenta",
+    "delete_account_desc": "Elimina permanentemente tu cuenta y todos los datos",
+    "save_changes": "Guardar Cambios",
+    "cancel": "Cancelar"
   }
 }
