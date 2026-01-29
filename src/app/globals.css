@@ -72,6 +72,8 @@
   --color-indigo-surface: oklch(59.8% 0.222 284.15 / 0.1);
   --color-yellow: oklch(82.3% 0.199 87.89);
   --color-yellow-surface: oklch(82.3% 0.199 87.89 / 0.1);
+  --color-neutral: oklch(55.6% 0 0);
+  --color-neutral-surface: oklch(55.6% 0 0 / 0.1);
 
   @keyframes dropdown-in {
     from {

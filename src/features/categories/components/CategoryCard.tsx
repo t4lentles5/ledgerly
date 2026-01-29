@@ -12,7 +12,7 @@ export const CategoryCard = ({
   const formattedAmount = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-  }).format(category.amount);
+  }).format(category.amount ?? 0);
 
   return (
     <article className='group bg-card hover:border-primary/20 hover:bg-surface-hover flex grow flex-row items-center justify-between rounded-xl border p-4 transition-all duration-200 sm:max-w-52 sm:flex-col sm:items-start sm:gap-3 sm:p-5'>

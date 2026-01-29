@@ -1,95 +1,62 @@
 import { getDictionary } from '@lib/i18n';
-import { Category } from './types';
+import { createClient } from '@shared/lib/supabase/server';
+import { Category, SupabaseCategory } from './types';
 
 type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 
-export const getCategories = (dict: Dictionary): Category[] => [
-  {
-    id: 'income',
-    name: dict.categories_list.income,
-    icon: 'icon-[meteor-icons--dollar] text-green',
-    surfaceClass: 'bg-green-surface',
-    transactions: 3,
-    amount: 5500,
-  },
-  {
-    id: 'food',
-    name: dict.categories_list.food,
-    icon: 'icon-[fluent--food-20-regular] text-orange',
-    surfaceClass: 'bg-orange-surface',
-    transactions: 6,
-    amount: 1200,
-  },
-  {
-    id: 'housing',
-    name: dict.categories_list.housing,
-    icon: 'icon-[proicons--home-2] text-blue',
-    surfaceClass: 'bg-blue-surface',
-    transactions: 20,
-    amount: 1500,
-  },
-  {
-    id: 'transport',
-    name: dict.categories_list.transport,
-    icon: 'icon-[raphael--bus] text-amber',
-    surfaceClass: 'bg-amber-surface',
-    transactions: 30,
-    amount: 100,
-  },
-  {
-    id: 'shopping',
-    name: dict.categories_list.shopping,
-    icon: 'icon-[material-symbols-light--shopping-cart-outline-rounded] text-violet',
-    surfaceClass: 'bg-violet-surface',
-    transactions: 50,
-    amount: 2100,
-  },
-  {
-    id: 'entertainment',
-    name: dict.categories_list.entertainment,
-    icon: 'icon-[hugeicons--tv-01] text-pink',
-    surfaceClass: 'bg-pink-surface',
-    transactions: 50,
-    amount: 2100,
-  },
-  {
-    id: 'health',
-    name: dict.categories_list.health,
-    icon: 'icon-[iconoir--heart] text-red',
-    surfaceClass: 'bg-red-surface',
-    transactions: 50,
-    amount: 2100,
-  },
-  {
-    id: 'utilities',
-    name: dict.categories_list.utilities,
-    icon: 'icon-[fluent--flash-20-regular] text-cyan',
-    surfaceClass: 'bg-cyan-surface',
-    transactions: 8,
-    amount: 350,
-  },
-  {
-    id: 'savings',
-    name: dict.categories_list.savings,
-    icon: 'icon-[fluent--savings-20-regular] text-teal',
-    surfaceClass: 'bg-teal-surface',
-    transactions: 2,
-    amount: 1000,
-  },
-  {
-    id: 'education',
-    name: dict.categories_list.education,
-    icon: 'icon-[fluent--hat-graduation-20-regular] text-indigo',
-    surfaceClass: 'bg-indigo-surface',
-    transactions: 1,
-    amount: 800,
-  },
-  {
-    id: 'travel',
-    name: dict.categories_list.travel,
-    icon: 'icon-[fluent--airplane-20-regular] text-yellow',
-    surfaceClass: 'bg-yellow-surface',
-    transactions: 4,
-    amount: 600,
-  },
-];
+const getCategoryTranslationKey = (
+  categoryId: string,
+): keyof Dictionary['categories_list'] | null => {
+  const translationMap: Record<string, keyof Dictionary['categories_list']> = {
+    income: 'income',
+    food: 'food',
+    housing: 'housing',
+    transport: 'transport',
+    shopping: 'shopping',
+    entertainment: 'entertainment',
+    health: 'health',
+    utilities: 'utilities',
+    savings: 'savings',
+    education: 'education',
+    travel: 'travel',
+    other: 'other',
+  };
+
+  return translationMap[categoryId] || null;
+};
+
+export const getCategoriesFromSupabase = async (
+  dict: Dictionary,
+): Promise<Category[]> => {
+  const supabase = await createClient();
+
+  const { data: categoriesData, error } = await supabase
+    .from('categories')
+    .select('*');
+
+  if (error) {
+    console.error('Error fetching categories:', error);
+    return [];
+  }
+
+  if (!categoriesData) {
+    return [];
+  }
+
+  return categoriesData.map((category: SupabaseCategory) => {
+    const translationKey = getCategoryTranslationKey(category.id);
+    const translatedName = translationKey
+      ? dict.categories_list[translationKey]
+      : category.id.charAt(0).toUpperCase() + category.id.slice(1);
+
+    return {
+      id: category.id,
+      name: translatedName,
+      icon: category.icon,
+      surfaceClass: category.surface_class,
+      type: category.type,
+      transactions: 0,
+      amount: 0,
+    };
+  });
+};

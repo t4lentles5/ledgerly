@@ -1,6 +1,6 @@
 import { getDictionary } from '@lib/i18n';
 
-import { getCategories } from '@features/categories/data';
+import { getCategoriesFromSupabase } from '@features/categories/data';
 import { CategoryCard } from '@features/categories/components/CategoryCard';
 import { Header } from '@shared/ui/header/Header';
 
@@ -11,7 +11,7 @@ export default async function CategoriesPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
-  const categories = getCategories(dict);
+  const categories = await getCategoriesFromSupabase(dict);
 
   return (
     <>

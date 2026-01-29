@@ -41,6 +41,7 @@
     "savings": "Savings",
     "education": "Education",
     "travel": "Travel",
+    "other": "Other",
     "transactions": "transactions"
   },
   "budgets_list": {
